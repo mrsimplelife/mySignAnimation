@@ -1,0 +1,85 @@
+.sign-form {
+  min-width: 875px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.sign-form h1 {
+  color: #39a9ab;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 76px;
+}
+
+.sign-form > p {
+  color: #b0b2b1;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+}
+.sign-form .input {
+  width: 523px;
+  height: 77px;
+  background-color: #f4f8f7;
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.sign-form .input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.sign-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-form .input .icon {
+  color: #b0b2b1;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.sign-form form > p {
+  color: #6a6b6b;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+}
+.sign-form form button {
+  width: 292px;
+  height: 77px;
+  padding: 0px 8px;
+  border: 4px solid #f4f8f7;
+  box-sizing: border-box;
+  border-radius: 27px;
+  background-color: #39a9ab;
+  color: #daefee;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 28px;
+  outline: none;
+  cursor: pointer;
+}
