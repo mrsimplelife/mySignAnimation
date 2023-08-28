@@ -2,9 +2,10 @@
 
 # **My Sign Animation**
 
-https://github.com/mrsimplelife/mySignAnimation/assets/22779951/1e2a167f-77a1-4499-a6c1-d70fbf21dd96
 
-https://github.com/mrsimplelife/mySignAnimation/assets/22779951/fa60c3b0-1945-4287-a005-5191f9e7dd9b
+https://github.com/mrsimplelife/mySignAnimation/assets/22779951/fd58fd75-3205-4f76-842d-fb3bdd9e6af9
+
+https://github.com/mrsimplelife/mySignAnimation/assets/22779951/9cb381d4-50b3-4643-a8f3-e04caa31a014
 
 ## **프로젝트 개요**
 
