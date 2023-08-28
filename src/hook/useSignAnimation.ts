@@ -3,6 +3,10 @@ import { useCallback, useEffect, useState } from 'react';
 function useSignAnimation() {
   const [isSignin, setIsSignin] = useState<boolean>();
   const [isSigninForm, setIsSigninFrom] = useState<boolean>();
+  const [isActive, setIsActive] = useState(false);
+  const handleActive = useCallback((active: boolean) => {
+    setIsActive(active);
+  }, []);
 
   const handleButton = useCallback(() => {
     setIsSignin((prev) => !prev);
@@ -22,7 +26,17 @@ function useSignAnimation() {
 
   const signupAnimation = `signup-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
 
-  return { isSignin, isSigninForm, handleButton, signformAnimation, backgroundAnimation, signinAnimation, signupAnimation };
+  return {
+    isSignin,
+    isSigninForm,
+    handleButton,
+    signformAnimation,
+    backgroundAnimation,
+    signinAnimation,
+    signupAnimation,
+    isActive,
+    handleActive,
+  };
 }
 
 export default useSignAnimation;

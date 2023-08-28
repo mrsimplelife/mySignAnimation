@@ -42,13 +42,19 @@
   display: flex;
   align-items: center;
   position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.sign-page button.active {
+  transform: scale(0.9);
 }
 
 .sign-page button p {
   margin: 0;
   position: absolute;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out 0.1s;
 }
+
 .sign-page button p.signin {
   transform: translateX(0px) scale(1);
   opacity: 1;

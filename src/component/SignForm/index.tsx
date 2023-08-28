@@ -9,7 +9,7 @@ type SignFromProps = {
 function SignFrom({ isSignin }: SignFromProps) {
   return (
     <div className='sign-form'>
-      <h1>{isSignin ? 'Sign in to Diprella' : 'Create Account'}</h1>
+      <h1>{isSignin ? 'Sign in to my App' : 'Create Account'}</h1>
       <p>{isSignin ? 'or use your email account :' : 'or use your email for registration :'}</p>
       <form>
         {!isSignin && (
