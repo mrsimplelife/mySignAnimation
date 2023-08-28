@@ -26,7 +26,7 @@ function SignFrom({ isSignin }: SignFromProps) {
           <FontAwesomeIcon icon={faLock} className='input-icon icon' />
           <input type='password' placeholder='Password' autoComplete='current-password' />
         </div>
-        <p>Forgot your password?</p>
+        {isSignin && <p>Forgot your password?</p>}
         <button>{isSignin ? 'SIGN IN' : 'SIGN UP'}</button>
       </form>
     </div>
