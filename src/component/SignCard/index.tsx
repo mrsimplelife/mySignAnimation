@@ -5,6 +5,7 @@ import './style.css';
 
 function SignCard() {
   const { isSignin, isSigninForm, handleButton, signformAnimation, backgroundAnimation, signinAnimation, signupAnimation } = useSignAnimation();
+
   return (
     <div className='card'>
       <div className={signformAnimation}>{isSignin ? <SignFrom isSignin={isSigninForm} /> : <SignFrom isSignin={isSigninForm} />}</div>

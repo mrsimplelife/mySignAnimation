@@ -16,7 +16,7 @@ function useSignAnimation() {
 
   const signformAnimation = `sign-form-transition${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
 
-  const backgroundAnimation = `background-transition${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
+  const backgroundAnimation = `background-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
 
   const signinAnimation = `signin-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
 
