@@ -1,41 +1,48 @@
 import { useCallback, useEffect, useState } from 'react';
 
 function useSignAnimation() {
-  const [isSignin, setIsSignin] = useState<boolean>();
+  const [isSigninPage, setIsSigninPage] = useState<boolean>();
   const [isSigninForm, setIsSigninFrom] = useState<boolean>();
-  const [isActive, setIsActive] = useState(false);
-  const handleActive = useCallback((active: boolean) => {
-    setIsActive(active);
+  const [isButtonActive, setIsButtonActive] = useState(false);
+
+  const updateIsButtonActive = useCallback((active: boolean) => {
+    setIsButtonActive(active);
   }, []);
 
-  const handleButton = useCallback(() => {
-    setIsSignin((prev) => !prev);
+  const toggleIsSigninPage = useCallback(() => {
+    setIsSigninPage((prev) => !prev);
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsSigninFrom(isSignin);
-    }, 250);
-  }, [isSignin]);
+    setTimeout(() => setIsSigninFrom(isSigninPage), 250);
+  }, [isSigninPage]);
 
-  const signformAnimation = `sign-form-transition${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
+  const signformAnimation = `sign-form-transition${isSigninPage === undefined ? '' : isSigninPage ? ' signin' : ' signup'}`;
 
-  const backgroundAnimation = `background-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
+  const backgroundAnimation = `background-animation${isSigninPage === undefined ? '' : isSigninPage ? ' signin' : ' signup'}`;
 
-  const signinAnimation = `signin-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
+  const backgroundButtonAnimation = `${isButtonActive ? 'active' : ''}`;
 
-  const signupAnimation = `signup-animation${isSignin === undefined ? '' : isSignin ? ' signin' : ' signup'}`;
+  const backgroundButtonSignin = `signin${isSigninPage ? ' gone' : ''}`;
+
+  const backgroundButtonSignup = `signup${isSigninPage ? ' come' : ''}`;
+
+  const signinAnimation = `signin-animation${isSigninPage === undefined ? '' : isSigninPage ? ' signin' : ' signup'}`;
+
+  const signupAnimation = `signup-animation${isSigninPage === undefined ? '' : isSigninPage ? ' signin' : ' signup'}`;
 
   return {
-    isSignin,
+    isSigninPage,
+    toggleIsSigninPage,
     isSigninForm,
-    handleButton,
+    updateIsButtonActive,
     signformAnimation,
     backgroundAnimation,
     signinAnimation,
     signupAnimation,
-    isActive,
-    handleActive,
+    backgroundButtonAnimation,
+    backgroundButtonSignin,
+    backgroundButtonSignup,
   };
 }
 
