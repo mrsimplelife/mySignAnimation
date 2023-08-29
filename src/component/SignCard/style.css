@@ -81,6 +81,7 @@
   right: 0;
   transition: transform 0.5s ease-in-out;
   display: flex;
+  transform: translateX(875px);
 }
 .signup-animation.signin {
   transform: translateX(0px);

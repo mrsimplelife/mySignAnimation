@@ -3,28 +3,32 @@ import './style.css';
 type SignPageProps = {
   title: string;
   description: string;
-  button: string;
-  onClick: () => void;
-  mock?: boolean;
-  isSignin?: boolean;
-  handleActive: (active: boolean) => void;
-  isActive: boolean;
+  onChangePageButtonClick: () => void;
+  onChangePageButtonMouseDown: () => void;
+  onChangePageButtonMouseUp: () => void;
+  onChangePageButtonMouseLeave: () => void;
 };
 
-function SignPage({ title, description, onClick, mock, isSignin, handleActive, isActive }: SignPageProps) {
+function SignPage({
+  title,
+  description,
+  onChangePageButtonClick,
+  onChangePageButtonMouseDown,
+  onChangePageButtonMouseLeave,
+  onChangePageButtonMouseUp,
+}: SignPageProps) {
   return (
     <div className='sign-page'>
-      <h1 className={`${mock ? 'opacity' : ''}`}>{title}</h1>
-      <p className={`${mock ? 'opacity' : ''}`}>{description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
       <button
-        className={`${mock ? '' : 'opacity'} ${isActive ? ' active' : ''}`}
-        onClick={onClick}
-        onMouseDown={() => handleActive(true)}
-        onMouseUp={() => handleActive(false)}
-        onMouseLeave={() => handleActive(false)}
+        className='opacity'
+        onClick={onChangePageButtonClick}
+        onMouseDown={onChangePageButtonMouseDown}
+        onMouseUp={onChangePageButtonMouseUp}
+        onMouseLeave={onChangePageButtonMouseLeave}
       >
-        <p className={`signin ${isSignin ? ' gone' : ''}`}>SIGN IN</p>
-        <p className={`signup ${isSignin ? ' come' : ''}`}>SIGN UP</p>
+        SIGN IN
       </button>
     </div>
   );
